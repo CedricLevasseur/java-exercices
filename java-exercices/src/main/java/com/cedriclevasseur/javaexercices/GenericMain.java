@@ -26,7 +26,7 @@ public class GenericMain {
         root.addChild(branch1);
         root.addChild(branch2);
         
-        System.out.println(root.show());
+        System.out.println((String)root.show());
         
     }
     

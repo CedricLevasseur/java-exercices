@@ -52,10 +52,11 @@ public class TreeNode<String,T> {
     public String show(){
         StringBuilder sb = new StringBuilder();
         sb.append(name+"\n");
-        for(TreeNode<String,T> child: children){
-            sb.append("|--"+child.show());
+        for(TreeNode child : children){
+            sb.append("|--"+child.show()+"\n");
         }
-        return (String) sb;
+        String result = (String) sb.toString();
+        return result;
     }
     
     
