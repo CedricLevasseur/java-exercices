@@ -50,10 +50,18 @@ public class TreeNode<String,T> {
     }
     
     public String show(){
+        return show(0);
+    }
+    
+    public String show(int indentInt){
         StringBuilder sb = new StringBuilder();
+        StringBuilder indent=new StringBuilder();
+        for(int i=0;i<indentInt;i++){
+            indent.append("   ");
+        }
         sb.append(name+"\n");
         for(TreeNode child : children){
-            sb.append("|--"+child.show()+"\n");
+            sb.append(indent).append("|--"+child.show(indentInt+1));
         }
         String result = (String) sb.toString();
         return result;
