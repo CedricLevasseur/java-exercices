@@ -1,6 +1,7 @@
 package com.cedriclevasseur.javaexercices;
 
 import com.cedriclevasseur.javaexercices.generics.TreeNode;
+import com.cedriclevasseur.javaexercices.generics.Utils;
 
 /**
  *
@@ -32,7 +33,7 @@ public class GenericMain {
         root.addChild(branch1);
         root.addChild(branch2);
         
-        System.out.println((String)root.show());
+        System.out.println((String)Utils.show(root));
         
     }
     
